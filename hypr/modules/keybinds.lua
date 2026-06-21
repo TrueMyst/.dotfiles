@@ -4,7 +4,7 @@
 
 -- Variables
 local term = "foot"
-local file = "pcmanfm"
+local file = "nautilus"
 local ipc = "noctalia msg"
 
 -- Applications
