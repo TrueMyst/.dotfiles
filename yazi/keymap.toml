@@ -1,0 +1,44 @@
+# -------------------------------
+#             Keymaps
+# -------------------------------
+
+[mgr]
+prepend_keymap = [
+  # Essentials
+  { on = ["A"], run = "create --dir", desc = " Create a directory" },
+  { on = ["U"], run = "plugin ouch", desc = " Archive selected files" },
+  { on = ["e"], run = "cd --interactive", desc = "󰎐 Jump interactively" },
+
+  # Search & Find
+  { on = ["<C-f>"], run = "find --smart", desc = "󰱼 Find for any occurrence"},
+  { on = ["<C-s>"], run = 'search_do --via=fd --args="-d 3"', desc = "󰱼 Switch to Flat Search" },
+
+  # Toggle Pane
+  { on = ["<S-p>"], run = "plugin toggle-pane max-preview", desc = "󰭰 Maximize the preview pane" },
+
+  # Move Cursor
+  { on = "<C-u>", run = "seek -5", desc = "Seek up 5 units in the preview" },
+  { on = "<C-d>", run = "seek 5", desc = "Seek down 5 units in the preview" },
+
+  # Swap & Switch Tabs
+  { on = ">", run = "tab_swap 1", desc = " Swap current tab with next tab" },
+  { on = "<", run = "tab_swap -1", desc = " Swap current tab with previous tab" },
+
+  { on = "L", run = "tab_switch 1 --relative", desc = "󰌒 Switch to the next tab" },
+  { on = "H", run = "tab_switch -1 --relative", desc = "󰌥 Switch to the previous tab" },
+
+  # Directories
+  { on = ["g", "h"], run = "cd ~/", desc = "󰋜 Home" },
+  { on = ["g", "m"], run = "cd ~/music/", desc = "󰌳 Music" },
+  { on = ["g", "v"], run = "cd ~/videos/", desc = "󰴙 Videos" },
+  { on = ["g", "p"], run = "cd ~/pictures", desc = "󰋹 Pictures" },
+  { on = ["g", "d"], run = "cd ~/downloads/", desc = " Downloads" },
+  { on = ["g", "D"], run = "cd ~/documents/", desc = "󱔗 Documents" },
+
+  # Custom Bookmarks
+  { on = ["g", "c"], run = "cd ~/.config/", desc = "󱁿 Config" },
+  { on = ["g", "P"], run = "cd ~/projects/", desc = "󰪷 Projects" },
+  { on = ["g", "f"], run = "cd ~/.dotfiles/", desc = "󰣞 Dotfiles" },
+
+  { on = ["!"], run = 'shell "$SHELL" --block', desc = "Open shell here" },
+]

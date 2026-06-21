@@ -1,0 +1,24 @@
+# Theme
+include themes/catppuccin-mocha
+
+# Font
+set font "JetBrainsMono Nerd Font 12"
+
+# Clipboard
+set selection-clipboard "clipboard"
+
+# Keybindings
+map <C-=> zoom in
+map <C--> zoom out
+
+# Scrolling
+set scroll-step 90
+set scroll-page-aware true
+
+# Appearance
+set page-padding 5
+set recolor-keephue true
+
+# Behavior
+set open-first-page true
+set statusbar-home-tilde true

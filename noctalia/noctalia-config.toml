@@ -1,0 +1,79 @@
+[bar.default]
+capsule = true
+capsule_opacity = 0.70
+capsule_padding = 5.0
+center = []
+end = [
+    "clock",
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center",
+    "session"
+]
+margin_edge = 5
+margin_ends = 5
+padding = 5
+position = "left"
+start = [ "launcher", "wallpaper", "workspaces", "media" ]
+thickness = 40
+
+[dock]
+enabled = false
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 1
+widget_order = [ "lockscreen-login-box@VGA-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@VGA-1"]
+    cx = 685.0
+    cy = 645.0
+    output = "VGA-1"
+    rotation = 0.0
+    scale = 1.0
+    type = "login_box"
+
+[nightlight]
+enabled = true
+
+[shell]
+font_family = "JetBrainsMonoNL Nerd Font Propo"
+settings_show_advanced = true
+time_format = "{:%I:%M %p}"
+
+    [shell.panel]
+    control_center_placement = "floating"
+
+[theme]
+builtin = "Catppuccin"
+
+[wallpaper]
+directory = "~/.config/wallpapers"
+transition = [ "wipe" ]
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "~/.config/wallpapers/ghibli.png"
+
+    [wallpaper.last]
+    path = "~/.config/wallpapers/ghibli.png"
+
+    [wallpaper.monitors.VGA-1]
+    path = "~/.config/wallpapers/ghibli.png"
+
+[widget.clock]
+format = "{:%I:%M %p}"

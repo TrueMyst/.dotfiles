@@ -1,0 +1,21 @@
+# -------------------------------
+#           BAT EUGH!
+# -------------------------------
+
+# Set color theme
+--theme="catppuccin-mocha"
+
+# Enable italics
+--italic-text=always
+
+# Show line numbers
+--number
+
+# Force colored output
+--color=always
+
+# Enable visual decorations
+--decorations=always
+
+# Show file header only
+--style=header

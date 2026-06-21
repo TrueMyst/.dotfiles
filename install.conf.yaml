@@ -1,0 +1,93 @@
+# -------------------
+#       Dotbot
+# -------------------
+
+- defaults:
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+    link:
+      relink: true
+      backup: true
+
+- clean:
+    ~/:
+      force: true
+
+- create:
+    # XDG User Dirs
+    - ~/downloads/
+    - ~/documents/
+    - ~/music/
+    - ~/videos/
+    - ~/pictures/
+    - ~/projects/
+
+- link:
+    # Window Manager
+    ~/.config/hypr:
+      path: hypr
+
+    # Shell
+    ~/.config/fish:
+      glob: true
+      path: fish
+      exclude:
+        - fish/functions
+        - fish/completions
+        - fish/fish_variables
+
+    # Terminals
+    ~/.config/alacritty:
+      path: alacritty
+
+    ~/.config/foot:
+      path: foot
+
+    # Terminal Tools
+    ~/.config/bat:
+      path: bat
+
+    ~/.config/btop:
+      path: btop 
+
+    ~/.config/catnap:
+      path: catnap
+
+    ~/.config/cava:
+      path: cava 
+
+    ~/.config/fzf:
+      path: fzf
+
+    ~/.config/starship:
+      path: starship
+
+    ~/.config/yazi:
+      path: yazi 
+
+    # Applications
+    ~/.config/zathura:
+      path: zathura
+
+    ~/.config/vesktop:
+      glob: true
+      path: vesktop/*
+
+    # Misc
+    ~/.config/wallpapers:
+      path: wallpapers
+
+    ~/.config/user-dirs.dirs:
+      path: user-dirs.dirs
+
+- shell:
+    - 
+      command: chsh -s $(which fish)
+      description: "Change the default shell to fish."
+
+    -
+      command: bat cache --build
+      description: "Rebuild bat's cache"

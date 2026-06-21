@@ -1,0 +1,88 @@
+# -------------------------------
+#              Yazi
+# -------------------------------
+
+[mgr]
+ratio   = [2, 3, 3]
+sort_by = "natural"
+
+[opener]
+text = [
+  { run = 'nvim "$@"', block = true, desc = "nvim", for = "linux" },
+  { run = 'nano "$@"', block = true, desc = "nano", for = "linux" },
+  { run = 'zed "$@"', orphan = true, desc = "zed", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+image = [
+  { run = 'imv "$@"', orphan = true, desc = "imv", for = "linux" },
+  { run = 'ristretto "$@"', orphan = true, desc = "ristretto", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+media = [
+  { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "linux" },
+  { run = 'vlc "$@"', orphan = true, desc = "vlc", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+document = [
+  { run = 'zathura "$@"', orphan = true, desc = "zathura", for = "linux" },
+  { run = 'xournalpp "$@"', orphan = true, desc = "xournalpp", for = "linux" },
+  { run = 'libreoffice "$@"', orphan = true, desc = "libreoffice", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+folder = [
+  { run = 'nvim "$1"', block = true, desc = "nvim", for = "linux" },
+  { run = 'thunar "$@"', orphan = true, desc = "thunar", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+extract = [
+	{ run = 'ouch d -y "$@"', desc = "ouch", for = "linux" },
+	{ run = 'file-roller "$@"', desc = "file-roller", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+fallback = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+[open]
+rules = [
+  # Folders
+  { url = "*/", use = "folder" },
+
+  # Text
+  { mime = "text/*", use = "text" },
+  { mime = "inode/empty", use = "text" },
+  { mime = "application/json", use = "text" },
+
+  # Media (Image / Audio / Video)
+  { mime = "image/*", use = "image" },
+  { mime = "audio/*", use = "media" },
+  { mime = "video/*", use = "media" },
+
+  # PDF & ePub
+  { mime = "application/pdf", use = "document" },
+  { mime = "application/epub+zip", use = "document" },
+  { mime = "application/x-mobipocket-ebook", use = "document" },
+
+  # Office Documents
+  { mime = "application/msword", use = "document" },
+  { mime = "application/openxml*", use = "document" },
+
+  # Archives & Compressed
+  { mime = "application/*zip", use = "extract" },
+  { mime = "application/x-*", use = "extract" },
+
+  # Fallback for anything else
+  { mime = "*", use = "fallback" }
+]
+
+[plugin]
+prepend_fetchers = [
+	{ url = "*", run = "git", group = "git" },
+	{ url = "*/", run = "git", group = "git" },
+]

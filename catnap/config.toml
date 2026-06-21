@@ -1,0 +1,32 @@
+# -------------------
+#       Catnap
+# -------------------
+
+[stats]
+username  = { icon = " ", name = "user", color = "(CN)" }
+hostname  = { icon = "󰚂 ", name = "host", color = "(BE)" }
+sep_1 = "SEPARATOR"
+uptime    = { icon = "󰔚 ", name = "uptime", color = "(MA)" }
+distro    = { icon = "󰸼 ", name = "distro", color = "(RD)" }
+kernel    = { icon = " ", name = "kernel", color = "(YW)" }
+shell     = { icon = " ", name = "shell", color = "(CN)" }
+desktop   = { icon = "󰨇 ", name = "desktop", color = "(GN)" }
+packages  = { icon = " ", name = "packages", color = "(BE)" }
+sep_2 = "SEPARATOR"
+cpu       = { icon = " ", name = "cpu", color = "(MA)" }
+gpu       = { icon = "󱔐 ", name = "gpu", color = "(RD)" }
+memory    = { icon = " ", name = "mem", color = "(YW)" }
+disk_0    = { icon = " ", name = "disk", color = "(GN)" }
+sep_3 = "SEPARATOR"
+colors    = { icon = " ", name = "colors", color = "!DT!", symbol = "" }
+
+# -------------------------
+#       Miscellaneous
+# -------------------------
+
+[misc]
+location = ""
+stats_margin_top = 0
+
+layout = "Inline"
+borderstyle = "noborder"
