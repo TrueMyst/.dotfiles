@@ -58,6 +58,9 @@ time_format = "{:%I:%M %p}"
     [shell.panel]
     control_center_placement = "floating"
 
+    [shell.screenshot]
+    directory = "~/pictures/screenshots"
+
 [theme]
 builtin = "Catppuccin"
 
