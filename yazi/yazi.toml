@@ -35,7 +35,7 @@ document = [
 
 folder = [
   { run = 'nvim "$1"', block = true, desc = "nvim", for = "linux" },
-  { run = 'thunar "$@"', orphan = true, desc = "thunar", for = "linux" },
+  { run = 'nautilus "$@"', orphan = true, desc = "nautilus", for = "linux" },
   { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
 ]
 
